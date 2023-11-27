@@ -1,0 +1,20 @@
+.header {
+  background-color: var(--orange-text);
+  &__container {
+    padding: 28px 0;
+  }
+
+  &__logo {
+    color: white;
+    display: flex;
+    column-gap: 90px;
+  }
+
+  &__logoImg {
+
+  }
+
+  &__logoDesc {
+
+  }
+}

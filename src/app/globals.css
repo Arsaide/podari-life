@@ -1,5 +1,6 @@
 :root {
-
+  --orange-text: #d94236;
+  --text: #333;
 }
 
 *,
@@ -34,6 +35,7 @@ dd {
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
+  color: var(--text);
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -85,7 +87,7 @@ select {
 }
 
 [class*="container"] {
-  max-width: 1140px;
+  max-width: 1504px;
   margin: 0 auto;
   padding: 0 30px;
   flex-direction: column;

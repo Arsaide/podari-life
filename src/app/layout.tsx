@@ -7,24 +7,24 @@ import TheFooter from "@/components/TheFooter/TheFooter";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Благотворительный фонд "Подари Жизнь"',
-  description: 'Благотворительный фонд "Подари жизнь", информация о нас.',
+  title: 'Благотворительный фонд',
+  description: "Логотип благотворительного фонда 'Подари жизнь', информация о нас.",
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
+export default function RootLayout({children,}: {
+    children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-    <div className="wrapper">
-      <TheHeader/>
-      <main className='main'>
-        {children}
-      </main>
-      <TheFooter/>
-    </div>
-    </html>
+      <html lang="en">
+      <body className={inter.className}>
+          <div className="wrapper">
+            <TheHeader/>
+            <main className='main'>
+              {children}
+            </main>
+            <TheFooter/>
+          </div>
+      </body>
+      </html>
   )
 }
