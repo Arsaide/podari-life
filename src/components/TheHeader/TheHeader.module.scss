@@ -1,13 +1,20 @@
 .header {
-  background-color: var(--orange-text);
+  background: linear-gradient(90deg, var(--orange-text) 50%, #fff 0);
+
   &__container {
     padding: 28px 0;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   &__logo {
     color: white;
     display: flex;
-    column-gap: 90px;
+    column-gap: clamp(30px, 4.6vw, 90px);
+    position: relative;
   }
 
   &__logoImg {
@@ -15,6 +22,196 @@
   }
 
   &__logoDesc {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24.7px;
+    letter-spacing: 1.28px;
+  }
 
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__leftContent {
+    display: flex;
+    padding: 0 15px;
+  }
+
+  &__rightContent {
+    display: flex;
+    align-items: center;
+    column-gap: clamp(20px, 2vw, 40px);
+    padding-left: clamp(15px, 2.5vw, 50px);
+    padding-right: 15px;
+  }
+}
+
+.menu {
+  &__body {
+    display: none;
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+
+  }
+
+  &__icon {
+
+  }
+}
+
+.icon__menu {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 90px;
+  height: 18px;
+  z-index: 5;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.7px;
+  letter-spacing: -1.2px;
+
+  @media (any-hover: none) {
+    cursor: default;
+  }
+
+  span,
+  &::before,
+  &::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    left: 0;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  span {
+    top: calc(50% - 1px);
+  }
+
+  .menu-open & {
+    span {
+      width: 0;
+    }
+
+    &::before,
+    &::after {
+    }
+
+    &::before {
+      top: calc(50% - 1px);
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      bottom: calc(50% - 1px);
+      transform: rotate(45deg);
+    }
+
+  }
+}
+
+.icon__text {
+  margin-left: 35px;
+}
+
+.help {
+  color: var(--orange-text);
+  display: flex;
+  padding-left: 30px;
+  position: relative;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.7px;
+  letter-spacing: -1.4px;
+
+
+  &::before {
+    content: url('/heart.svg');
+    position: absolute;
+    left: 0;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+@media(max-width: 1023.98px) {
+  .header {
+    background: var(--orange-text);
+
+    &__container {
+      padding: 14px 0 8px 0;
+    }
+
+    &__img {
+      height: 40px;
+    }
+
+    &__logoDesc {
+      display: none;
+    }
+
+    &__leftContent {
+      justify-content: center;
+    }
+
+    &__rightContent {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .help {
+    font-size: 16px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding-left: 0px;
+    padding: 0 10px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .icon__menu {
+    width: 30px;
+
+    span,
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  .icon__text {
+    display: none;
+  }
+}
+
+@media(max-width: 424.98px) {
+  .header {
+    &__leftContent {
+      padding-left: 15px;
+      padding-right: 0px;
+    }
   }
 }
