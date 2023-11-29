@@ -14,7 +14,6 @@
     color: white;
     display: flex;
     column-gap: clamp(30px, 4.6vw, 90px);
-    position: relative;
   }
 
   &__logoImg {
@@ -45,25 +44,72 @@
     column-gap: clamp(20px, 2vw, 40px);
     padding-left: clamp(15px, 2.5vw, 50px);
     padding-right: 15px;
+    position: relative;
+    z-index: 5;
   }
 }
 
 .menu {
+  z-index: 1;
+
   &__body {
-    display: none;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: calc(100vh - 120px);
+    background-color: #fff;
+    transform: translateY(-100vh);
+    transition: transform 0.2s ease-in-out;
+    z-index: 1;
   }
 
   &__list {
-
+    padding: 50px 50px 0 50px;
   }
 
   &__item {
+    border-bottom: 1px solid #DFDFDF;
+    display: flex;
+    position: relative;
+    padding: 15px 0;
+    &:first-child {
+      border-top: 1px solid #DFDFDF;
+    }
+  }
 
+  &__link {
+    font-size: clamp(25px, 3.5vw, 58px);
+    font-style: normal;
+    font-weight: 400;
+    transition: color .2s ease-out 0s;
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: '+';
+      width: 30px;
+      height: 30px;
+      color: #000;
+      position: absolute;
+      right: 0;
+    }
+
+    &:hover {
+      color: var(--orange-text);
+
+      &::after {
+        color: var(--orange-text);
+      }
+    }
   }
 
   &__icon {
 
   }
+}
+
+.menu__body.active {
+  transform: translateY(0);
 }
 
 .icon__menu {
@@ -80,6 +126,13 @@
   line-height: 24.7px;
   letter-spacing: -1.2px;
 
+
+  transition: opacity .2s ease-out 0s;
+
+  &:hover {
+    opacity: .7;
+  }
+
   @media (any-hover: none) {
     cursor: default;
   }
@@ -94,6 +147,7 @@
     width: 30px;
     height: 2px;
     background-color: #000;
+    z-index: 5;
   }
 
   &::before {
@@ -108,7 +162,7 @@
     top: calc(50% - 1px);
   }
 
-  .menu-open & {
+  &.active {
     span {
       width: 0;
     }
@@ -126,8 +180,15 @@
       bottom: calc(50% - 1px);
       transform: rotate(45deg);
     }
-
   }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
 }
 
 .icon__text {
@@ -145,6 +206,7 @@
   line-height: 24.7px;
   letter-spacing: -1.4px;
 
+  transition: opacity .2s ease-out 0s;
 
   &::before {
     content: url('/heart.svg');
@@ -152,6 +214,10 @@
     left: 0;
     height: 24px;
     width: 24px;
+  }
+
+  &:hover {
+    opacity: .7;
   }
 }
 
@@ -177,6 +243,17 @@
 
     &__rightContent {
       flex-direction: row-reverse;
+    }
+  }
+
+  .menu {
+    &__body {
+      width: 100%;
+      transform: translateY(0) translateX(-100%);
+    }
+
+    &__list {
+      padding: 25px 25px 0 25px;
     }
   }
 
