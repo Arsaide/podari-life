@@ -1,5 +1,10 @@
 .header {
   background: linear-gradient(90deg, var(--orange-text) 50%, #fff 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
 
   &__container {
     padding: 28px 0;

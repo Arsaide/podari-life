@@ -1,6 +1,6 @@
 'use client'
 import styles from './TheHeader.module.scss'
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import classNames from 'classnames'
@@ -8,6 +8,33 @@ import classNames from 'classnames'
 interface BurgerMenuProps {}
 
 const TheHeader: React.FC<BurgerMenuProps> = () => {
+	//скртытие хедера
+	const [prevScrollPos, setPrevScrollPos] = useState(0);
+	const [visible, setVisible] = useState(true);
+
+	const handleScroll = () => {
+		const currentScrollPos = window.scrollY;
+		const isScrolledDown = prevScrollPos < currentScrollPos;
+
+		setPrevScrollPos(currentScrollPos);
+
+		setVisible(!isScrolledDown || currentScrollPos === 0);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [prevScrollPos]);
+
+
+	const scroll = window.innerWidth - document.documentElement.clientWidth;
+	const headerStyle = {
+		transform: `translateY(${visible ? '0' : '-100%'})`,
+		transition: 'transform 0.3s ease-in-out',
+	};
+
+
+	//бургер
 	const [menuOpen, setMenuOpen] = useState(false)
 
 	const handleToggle = () => {
@@ -30,10 +57,14 @@ const TheHeader: React.FC<BurgerMenuProps> = () => {
 		}
 
 		const disableScroll = () => {
+			const scroll = window.innerWidth - document.documentElement.clientWidth;
 			if(menuOpen) {
 				document.body.style.overflow = 'hidden';
+				document.body.style.marginRight = `${scroll}px`;
+
 			} else {
 				document.body.style.overflow = '';
+				document.body.style.marginRight = `0px`;
 			}
 		}
 
@@ -51,7 +82,7 @@ const TheHeader: React.FC<BurgerMenuProps> = () => {
 
 
 	return (
-		<header className={styles.header}>
+		<header style={headerStyle} className={styles.header}>
 			<div className={styles.header__container}>
 				<div className={styles.header__content}>
 					<div className={styles.header__leftContent}>
