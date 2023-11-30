@@ -102,10 +102,6 @@
       }
     }
   }
-
-  &__icon {
-
-  }
 }
 
 .menu__body.active {
@@ -127,7 +123,7 @@
   letter-spacing: -1.2px;
 
 
-  transition: opacity .2s ease-out 0s;
+  transition: opacity .1s ease-out 0s;
 
   &:hover {
     opacity: .7;
@@ -165,6 +161,7 @@
   &.active {
     span {
       width: 0;
+      display: none;
     }
 
     &::before,

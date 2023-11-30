@@ -70,8 +70,6 @@ const TheHeader: React.FC<BurgerMenuProps> = () => {
 						</div>
 					</div>
 					<div className={styles.header__rightContent}>
-
-
 						<div className={classNames(styles.header__menu, styles.menu)}>
 							<button
 								type='button'
