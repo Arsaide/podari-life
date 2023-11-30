@@ -27,7 +27,6 @@ const TheHeader: React.FC<BurgerMenuProps> = () => {
 	}, [prevScrollPos]);
 
 
-	const scroll = window.innerWidth - document.documentElement.clientWidth;
 	const headerStyle = {
 		transform: `translateY(${visible ? '0' : '-100%'})`,
 		transition: 'transform 0.3s ease-in-out',
@@ -57,14 +56,16 @@ const TheHeader: React.FC<BurgerMenuProps> = () => {
 		}
 
 		const disableScroll = () => {
-			const scroll = window.innerWidth - document.documentElement.clientWidth;
-			if(menuOpen) {
-				document.body.style.overflow = 'hidden';
-				document.body.style.marginRight = `${scroll}px`;
+			if (typeof window !== 'undefined') {
+				const scroll = window.innerWidth - document.documentElement.clientWidth;
+				if(menuOpen) {
+					document.body.style.overflow = 'hidden';
+					document.body.style.marginRight = `${scroll}px`;
 
-			} else {
-				document.body.style.overflow = '';
-				document.body.style.marginRight = `0px`;
+				} else {
+					document.body.style.overflow = '';
+					document.body.style.marginRight = `0px`;
+				}
 			}
 		}
 
@@ -77,7 +78,7 @@ const TheHeader: React.FC<BurgerMenuProps> = () => {
 			document.removeEventListener('keydown', handleEscKey)
 			document.body.style.overflow = ''
 		}
-	}, [menuOpen]);
+	}, [prevScrollPos, menuOpen, visible]);
 
 
 
