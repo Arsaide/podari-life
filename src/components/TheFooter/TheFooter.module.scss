@@ -99,13 +99,11 @@
   position: relative;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: start;
   width: max-content;
   height: max-content;
   cursor: pointer;
   user-select: none;
 
-  display: flex;
   align-items: center;
   transition: background-color .3s ease-out 0s;
 

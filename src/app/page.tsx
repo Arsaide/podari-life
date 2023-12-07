@@ -1,78 +1,15 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import HomeBanner from "@/components/Pages/Home/HomeBanner/HomeBanner";
 
 export default function Home() {
   return (
     <>
-      <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        v
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        v
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        v
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
-        <div>132</div>
+      <HomeBanner/>
+        123
+        213312
+        132
+        132
     </>
   )
 }

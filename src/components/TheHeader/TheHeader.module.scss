@@ -5,6 +5,7 @@
   left: 0;
   width: 100%;
   transition: opacity 0.3s ease-in-out;
+  z-index: 5;
 
   &__container {
     padding: 28px 0;

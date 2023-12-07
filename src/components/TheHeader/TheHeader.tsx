@@ -150,6 +150,3 @@ const TheHeader: React.FC<BurgerMenuProps> = () => {
 }
 
 export default TheHeader
-
-
-// Детский рак лечится. Мы работаем, чтобы любой ребенок в России мог получить все необходимое лечение.
