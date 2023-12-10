@@ -8,7 +8,7 @@ const HomeBanner = () => {
             <div className={styles.banner__container}>
                 <div className={styles.leftContent}>
                     <h2 className={styles.leftContent__text}>Детский рак лечится. Мы работаем, чтобы любой ребенок в
-                        России мог получить все необходимое лечение.</h2>
+                        мог получить все необходимое лечение.</h2>
                 </div>
                 <div className={styles.rightContent}>
                     <div className={styles.rightContent__imgcnt}>
