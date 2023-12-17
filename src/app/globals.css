@@ -86,7 +86,6 @@ select {
 
 .main {
   flex: 1 1 auto;
-  padding-top: 119px;
 }
 
 [class*="container"] {
@@ -96,11 +95,6 @@ select {
   flex-direction: column;
 }
 
-@media(max-width: 1023.98px) {
-  .main {
-    padding-top: 62px;
-  }
-}
 
 @media (max-width: 767.98px) {
   [class*="container"] {

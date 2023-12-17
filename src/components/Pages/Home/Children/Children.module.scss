@@ -9,7 +9,7 @@
   }
 
   &__text {
-    font-size: clamp(22px, 3vw,30px);
+    font-size: clamp(22px, 2.5vw,30px);
     max-width: 65%;
   }
 
@@ -41,7 +41,7 @@
   }
 
   &__itemTitle {
-    font-size: clamp(40px, 4vw ,60px);
+    font-size: clamp(40px, 4vw ,55px);
     font-weight: 500;
     line-height: 96%;
     transition: color .3s ease-out 0s;
@@ -78,6 +78,11 @@
                 height .3s ease,
                 width .3s ease;
   }
+
+
+  &__itemDescImg {
+    display: none;
+  }
 }
 
 .list__item:hover .list__itemTitle {
@@ -108,10 +113,22 @@
   }
 
   .list {
+    &__itemHelpContent,
     &__itemContent {
       display: flex;
       align-items: normal;
       flex-direction: column;
+    }
+    &__itemDescImg {
+      display: block;
+    }
+  }
+}
+
+@media(max-width: 767.98px) {
+  .list {
+    &__itemDesc {
+      margin: 10px 0 0 0;
     }
   }
 }

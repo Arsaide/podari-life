@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './Children.module.scss'
 import Image from "next/image";
 import {getDebugPort} from "next/dist/server/lib/utils";
+import Link from "next/link";
 
 interface ChildImage {
     src: string
@@ -92,16 +93,21 @@ const Children = () => {
                                     className={`${styles.list__item} ${hoveredChild === index ? styles.list__item_hovered : ''}`}
                                     onMouseEnter={() => handleChildHover(index)}
                                     onMouseLeave={() => handleChildHover(null)}>
-                                    <div className={styles.list__itemContent}>
+                                    <Link href='/give-help' className={styles.list__itemContent}>
                                         <div className={styles.list__itemHelpContent}>
                                             <h4 className={styles.list__itemTitle}>{child.name}</h4>
                                             <p className={styles.list__itemDiag}>{child.diagnosis}</p>
                                         </div>
                                         <p className={styles.list__itemHelp}>Помочь!</p>
-                                    </div>
+                                    </Link>
                                     <div className={styles.list__itemDesc}>
                                         <p className={styles.list__desc}>{child.years} лет</p>
                                         <p className={styles.list__desc} style={{color: 'var(--orange-text)'}}>{child.money} ₽ необходимо</p>
+                                        <Image className={styles.list__itemDescImg}
+                                               src={child.src}
+                                               alt={child.alt}
+                                               width={200}
+                                               height={200}/>
                                     </div>
                                 </li>
                             ))}
@@ -115,8 +121,8 @@ const Children = () => {
                             <Image
                                 src={childImages[hoveredChild].src}
                                 alt={childImages[hoveredChild].alt}
-                                width={200}
-                                height={200}
+                                width={300}
+                                height={300}
                             />
                         )}
                     </div>
