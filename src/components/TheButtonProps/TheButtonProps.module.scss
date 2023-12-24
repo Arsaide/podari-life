@@ -1,0 +1,16 @@
+.button {
+  border-radius: 28px;
+  border: 5px solid var(--orange-text);
+  padding: 12px clamp(30px, 5vw, 68px);
+  color: var(--orange-text);
+  font-size: clamp(30px, 5vw,60px);
+  font-weight: 400;
+  cursor: pointer;
+  transition: color .3s ease-out 0s,
+              background-color .3s ease-out 0s;
+
+  &:hover {
+    background-color: var(--orange-text);
+    color: white;
+  }
+}

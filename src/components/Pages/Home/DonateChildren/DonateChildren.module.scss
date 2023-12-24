@@ -1,0 +1,22 @@
+.donate {
+  padding-top: clamp(40px, 4vw, 100px);
+  padding-bottom: clamp(40px, 4vw, 100px);
+  &__container {
+    font-weight: 400;
+  }
+
+  &__title {
+    font-size: 76px;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-size: 22px;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
