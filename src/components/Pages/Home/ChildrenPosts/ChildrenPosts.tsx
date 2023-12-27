@@ -7,6 +7,17 @@ async function getData() {
     return posts
 }
 
+export async function getStaticProps() {
+    const posts = await getData();
+
+    return {
+        props: {
+            posts,
+        },
+        revalidate: 60,
+    };
+}
+
 const ChildrenPosts = async () => {
     const posts = await getData()
 
