@@ -1,0 +1,152 @@
+.posts {
+  &__container {
+     padding: 50px 10px 150px 10px;
+  }
+
+  &__title {
+    margin-bottom: clamp(20px, 3vw, 34px);
+    font-weight: 400;
+    color: #333;
+    font-size: clamp(30px, 3vw, 94.8px);
+    line-height: 94px;
+    letter-spacing: -.04em;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border-top: 1px solid rgba(59, 59, 59, .3);
+  padding: 20px 20px 0 20px;
+  flex: 0 0 33.3333%;
+  min-width: 430px;
+  color: #333;
+  transition: color .2s ease-out 0s;
+
+  &:first-child {
+    padding-left: 0;
+    border-right: 1px solid rgba(59, 59, 59, .3);
+  }
+  &:nth-child(2) {
+    border-right: 1px solid rgba(59, 59, 59, .3);
+  }
+  &:nth-child(3) {
+    padding-right: 0;
+  }
+
+  &__imgcnt {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: clamp(23px, 2vw,30px);
+    line-height: 36px;
+  }
+
+  &__text {
+    font-size: clamp(15px, 2vw,   18.3px);
+    line-height: 24px;
+    font-weight: 500;
+    color: gray;
+    letter-spacing: -.02em;
+  }
+
+  &__date {
+    display: block;
+    font-size: 18.3px;
+    line-height: 24px;
+    letter-spacing: -.02em;
+    color: grey;
+  }
+
+  &__status {
+    display: block;
+    font-size: 21.2px;
+    line-height: 28px;
+    font-weight: 500;
+    color: var(--orange-text);
+  }
+}
+
+.card:hover {
+  .card__title {
+    color: var(--orange-text);
+  }
+}
+
+@media(max-width: 1439.98px) {
+  .cards {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .card {
+    border-top: 1px solid rgba(59, 59, 59, .3);
+    border-bottom: 1px solid rgba(59, 59, 59, .3);
+    padding: 20px;
+
+    &:first-child {
+      padding-left: 20px;
+      border-right: 0;
+    }
+    &:nth-child(2) {
+      border-right: 0;
+    }
+    &:nth-child(3) {
+      padding-right: 20px;
+    }
+  }
+}
+
+@media(max-width: 767.98px) {
+  .posts {
+    &__container {
+      padding: 50px 5px 70px 5px;
+    }
+  }
+}
+
+@media(max-width: 424.98px) {
+  .card {
+    min-width: 250px;
+    padding: 10px;
+    &:first-child {
+      padding-left: 10px;
+    }
+    &:nth-child(2) {
+    }
+    &:nth-child(3) {
+      padding-right: 10px;
+    }
+
+    &__imgcnt {
+      height: 150px;
+    }
+  }
+}

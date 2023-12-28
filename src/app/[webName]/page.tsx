@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './page.module.scss'
 import {Metadata} from "next";
-import posts from "../../../public/childrenPosts.json";
+import posts from "../../../public/childrenPosts";
 import Image from "next/image";
 import Link from "next/link";
+import ChildrenPosts from "@/components/Pages/Home/ChildrenPosts/ChildrenPosts";
 
 async function getData(id: string) {
     const post = posts.find((post) => post.id === Number(id))
@@ -28,15 +29,19 @@ const Post = async ({ params: { webName } }: Props) => {
 
     if (!item) {
         return (
-            <section className={styles.post} style={{paddingTop:"150px"}}>
+            <section className={styles.post}>
                 <div className={styles.post__container}>
-                    <p className={styles.post__error}>Новость не найдена</p>
+                    <div className={styles.post__header}>
+                        <Link href='/' className={styles.post__desc}>Вернуться назад</Link>
+                        <h3 className={styles.post__title}>Пост не найден.</h3>
+                    </div>
                     <Image
                         src='/posts/error.gif'
                         alt='GIF-изображение. Ошибка. Новость не найден'
                         width={500}
                         height={450}/>
                 </div>
+                <div className={styles.background}></div>
             </section>
         )
     } else {
@@ -85,6 +90,8 @@ const Post = async ({ params: { webName } }: Props) => {
                         </div>
                     </div>
                 </div>
+
+                <ChildrenPosts/>
                 <div className={styles.background}></div>
             </section>
         )

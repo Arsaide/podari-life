@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--orange-text);
-  padding: 130px 15px;
+  padding: clamp(70px, 8vw,130px) 15px;
   &__container {
     color: white;
   }
