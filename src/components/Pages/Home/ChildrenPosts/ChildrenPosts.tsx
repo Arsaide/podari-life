@@ -28,8 +28,8 @@ const ChildrenPosts = async () => {
             <div className={styles.posts__container}>
                 {randomPosts.map((post) => (
                     <Link href={`/${post.id}`} key={post.id}>
-                        <h2>{post.desc}</h2>
-                        <p>{post.date}</p>
+                        <h2>{post.card.text.desc}</h2>
+                        <p>{post.card.text.date}</p>
                     </Link>
                 ))}
             </div>
