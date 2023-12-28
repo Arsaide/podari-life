@@ -11,24 +11,30 @@ async function getData(id: string) {
 
 type Props = {
     params: {
-        id: string
-    }
-}
+        webName: string;
+    };
+};
 
-export async function generateMetadata({ params: { id } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params: { webName } }: Props): Promise<Metadata> {
+    const post = posts.find((post) => post.webName === webName);
     return {
-        title: id,
-    }
+        title: post?.card?.text?.title || 'Новость не найдена',
+    };
 }
 
-const Post = async ({params: {id}}: Props) => {
-    const item = await getData(id)
+const Post = async ({ params: { webName } }: Props) => {
+    const item = posts.find((post) => post.webName === webName);
 
     if (!item) {
         return (
             <section className={styles.post}>
-                <div>
-                   <p>Post not found</p>
+                <div className={styles.post__container}>
+                    <p className={styles.post__error}>Новость не найдена</p>
+                    <Image
+                        src='/posts/error.gif'
+                        alt='GIF-изображение. Ошибка. Новость не найден'
+                        width={500}
+                        height={450}/>
                 </div>
             </section>
         )
