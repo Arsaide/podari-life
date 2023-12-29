@@ -46,6 +46,8 @@
       display: block;
       width: 100%;
       max-width: 100%;
+      overflow-clip-margin: content-box;
+      overflow: clip;
       height: 100%;
     }
   }
@@ -134,7 +136,8 @@
 
 @media(max-width: 424.98px) {
   .card {
-    min-width: 250px;
+    //min-width: 250px;
+    min-width: 100%;
     padding: 10px;
     &:first-child {
       padding-left: 10px;
@@ -144,9 +147,13 @@
     &:nth-child(3) {
       padding-right: 10px;
     }
+  }
+}
 
+@media(max-width: 374.98px) {
+  .card {
     &__imgcnt {
-      height: 150px;
+      height: 200px;
     }
   }
 }
