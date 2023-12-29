@@ -159,6 +159,7 @@
   }
   .content {
     border-bottom: 0;
+    padding: 10px;
 
     &__imgcnt {
       height: clamp(230px, 10vw, 410px);
