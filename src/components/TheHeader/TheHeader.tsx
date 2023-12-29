@@ -138,6 +138,14 @@ const TheHeader: React.FC<BurgerMenuProps> = () => {
 					<li className={styles.menu__item}>
 						<Link
 							className={styles.menu__link}
+							href='/publications'
+							onClick={handleToggle}>
+							Публикации
+						</Link>
+					</li>
+					<li className={styles.menu__item}>
+						<Link
+							className={styles.menu__link}
 							href='/give-help'
 							onClick={handleToggle}>
 							Помочь фонду
