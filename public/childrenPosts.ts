@@ -299,7 +299,7 @@ const posts = [
 
     "card": {
       "img": {
-        "src": "poyavilsya-diagnoz-i-zhizn-izmenilas-k-luchshemu.jpg",
+        "src": "poyavilsya-diagnoz-i-zhizn-izmenilas-k-luchshem.jpg",
         "alt": "Изображение поста про девочку Олесю"
       },
       "text": {
@@ -311,7 +311,7 @@ const posts = [
     },
     "post": {
       "img": {
-        "src": "poyavilsya-diagnoz-i-zhizn-izmenilas-k-luchshemu.jpg",
+        "src": "poyavilsya-diagnoz-i-zhizn-izmenilas-k-luchshem.jpg",
         "alt": "Изображение поста про девочку Олесю",
         "desc": "Изображение поста про девочку Олесю"
       },
