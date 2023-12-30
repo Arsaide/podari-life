@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./page.module.scss"
 import Image from "next/image";
+import Link from "next/link";
 
 const WhoWe = () => {
 	return (
@@ -20,7 +21,8 @@ const WhoWe = () => {
 				</div>
 			</div>
 			<div className={styles.who__container}>
-				123
+				<Link href="/who-we/istoriya">Info</Link>
+				<Link href="/who-we/kontakty-i-rekvizity">Contacts</Link>
 			</div>
 		</section>
 	)
