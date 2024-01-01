@@ -21,8 +21,34 @@ const WhoWe = () => {
 				</div>
 			</div>
 			<div className={styles.who__container}>
-				<Link href="/who-we/istoriya">Info</Link>
-				<Link href="/who-we/kontakty-i-rekvizity">Contacts</Link>
+				<div className={styles.who__cards}>
+					<div className={styles.card}>
+						<h2 className={styles.card__title}>О фонде</h2>
+						<Link href='/who-we/istoriya' className={styles.card__link}>
+							<Image
+								className={styles.card__img}
+								src='/who/infoCard.jpg'
+								alt='Изображение об оббщих сведениях и историях фонда'
+								width={500}
+								height={400}
+							/>
+						</Link>
+						<p className={styles.card__text}>Общие сведения и история</p>
+					</div>
+					<div className={styles.card}>
+						<h2 className={styles.card__title}>Контакты и реквизиты</h2>
+						<Link href='/who-we/kontakty-i-rekvizity' className={styles.card__link}>
+							<Image
+								className={styles.card__img}
+								src='/who/locationCard.jpg'
+								alt='Изображение об оббщих сведениях и историях фонда'
+								width={500}
+								height={400}
+							/>
+						</Link>
+						<p className={styles.card__text}>Адрес и банковские реквизиты</p>
+					</div>
+				</div>
 			</div>
 		</section>
 	)
