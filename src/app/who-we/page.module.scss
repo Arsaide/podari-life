@@ -77,7 +77,7 @@
   &__title {
     color: #333;
     font-family: IBM Plex Serif;
-    font-size: 64px;
+    font-size: clamp(34px, 4vw, 64px);
     font-weight: 500;
     line-height: 101%;
     letter-spacing: -3.2px;
@@ -126,6 +126,15 @@
     &__img {
       max-width: 400px;
       max-height: 300px;
+    }
+  }
+}
+
+@media(max-width: 767.98px) {
+  .card {
+    &__img {
+      max-width: 300px;
+      max-height: 200px;
     }
   }
 }
