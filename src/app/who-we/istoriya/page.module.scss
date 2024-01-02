@@ -203,34 +203,6 @@
   }
 }
 
-.download:hover {
-  .download__title {
-    color: var(--orange-text);
-  }
-}
-
-@media(max-width: 1023.98px) {
-  .post {
-    &__header {
-      padding-top: 82px;
-    }
-  }
-  .content {
-    padding-right: 0;
-  }
-}
-
-@media(max-width: 767.98px) {
-  .post__content {
-    flex-direction: column-reverse;
-  }
-  .content {
-    border-bottom: 0;
-    padding: 10px;
-  }
-}
-
-
 .background {
   background-color: var(--orange-text);
   position: absolute;
@@ -240,6 +212,11 @@
   top: 0;
 }
 
+.download:hover {
+  .download__title {
+    color: var(--orange-text);
+  }
+}
 
 @media(max-width: 1023.98px) {
   .header {
@@ -249,5 +226,12 @@
 
   .background {
     height: 220px;
+  }
+}
+
+@media(max-width: 767.98px) {
+  .content {
+    border-bottom: 0;
+    padding: 10px;
   }
 }

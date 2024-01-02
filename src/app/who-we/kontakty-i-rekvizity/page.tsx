@@ -53,7 +53,7 @@ const Kontakty_i_rekvizity = () => {
                             </div>
                             <h3 className={styles.files__title}>Учредительные документы фонда</h3>
                             <div className={styles.files}>
-                                <div className={styles.filre__links}>
+                                <div className={styles.files__links}>
                                     <div className={styles.download}>
                                         <Link href='https://api.podari-zhizn.ru/storage/content_block/document/4/document-758f4099343a379e8fc5e5fd6a33865f.pdf'>
                                             <div className={styles.download__content}>
