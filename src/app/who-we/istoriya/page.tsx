@@ -8,7 +8,7 @@ const Istoriya = () => {
         <section className={styles.ist}>
             <div className={styles.ist__container}>
                 <div className={styles.header}>
-                    <Link href='/' className={styles.header__prevPage}>Кто мы</Link>
+                    <Link href='/who-we' className={styles.header__prevPage}>Кто мы</Link>
                     <h2 className={styles.header__title}>О фонде</h2>
                 </div>
                 <div className={styles.ist__content}>
