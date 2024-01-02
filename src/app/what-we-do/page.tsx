@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 const WhatWeDo = () => {
 	return (
-		<section className={styles.who}>
+		<section className={styles.wedo}>
 			<div className={styles.header}>
 				<div className={styles.header__nextcnt}>
 					<h2 className={styles.header__title}>Что мы делаем</h2>
@@ -17,7 +17,8 @@ const WhatWeDo = () => {
 					<p className={styles.header__text}>В этом разделе собрана информация о всех проектах фонда, которые направлены на помощь детям. А также о том, какие благотворительные мероприятия проводит «Подари жизнь» и с какими законодательными инициативами выступает.</p>
 				</div>
 			</div>
-			<div className={styles.who__container}>
+			<div className={styles.wedo__container}>
+
 			</div>
 		</section>
 	)

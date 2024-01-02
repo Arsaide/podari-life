@@ -8,9 +8,7 @@ const WhoWe = () => {
 		<section className={styles.who}>
 			<div className={styles.header}>
 				<div className={styles.header__nextcnt}>
-					<div className={styles.header__container}>
-						<h2 className={styles.header__title}>Кто мы</h2>
-					</div>
+					<h2 className={styles.header__title}>Кто мы</h2>
 					<div className={styles.header__imgcnt}>
 						<div className={styles.header__img} style={{backgroundImage: 'url(/who/banner.jpg)'}}>
 						</div>
