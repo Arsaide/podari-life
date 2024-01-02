@@ -33,7 +33,7 @@ const Post = async ({ params: { webName } }: Props) => {
                 <div className={styles.post__container}>
                     <div className={styles.post__header}>
                         <Link href='/' className={styles.post__desc}>Вернуться назад</Link>
-                        <h3 className={styles.post__title}>Пост не найден.</h3>
+                        <h2 className={styles.post__title}>Пост не найден.</h2>
                     </div>
                     <Image
                         src='/posts/error.gif'
@@ -50,7 +50,7 @@ const Post = async ({ params: { webName } }: Props) => {
                 <div className={styles.post__container}>
                     <div className={styles.post__header}>
                         <Link href='/' className={styles.post__desc}>Главная → Актуальные Новости</Link>
-                        <h3 className={styles.post__title}>{item.card.text.title}</h3>
+                        <h2 className={styles.post__title}>{item.card.text.title}</h2>
                     </div>
                     <div className={styles.post__content}>
                         <div className={styles.aside}>
@@ -74,7 +74,7 @@ const Post = async ({ params: { webName } }: Props) => {
                             </div>
                         </div>
                         <div className={styles.content}>
-                            <h4 className={styles.content__desc}>{item.card.text.desc}</h4>
+                            <h3 className={styles.content__desc}>{item.card.text.desc}</h3>
                             <p className={styles.content__text}>{item.post.text.firstText}</p>
                             <div className={styles.content__imgcnt}>
                                 <Image
@@ -85,7 +85,6 @@ const Post = async ({ params: { webName } }: Props) => {
                                     className={styles.content__img}/>
                             </div>
                             <p className={styles.content__imgDesc}>{item.post.img.desc}</p>
-                            <p></p>
                             <p className={styles.content__text}>{item.post.text.secondText}</p>
                         </div>
                     </div>

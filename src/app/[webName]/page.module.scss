@@ -42,7 +42,7 @@
 }
 
 .aside {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -94,8 +94,8 @@
   padding-bottom: 15px;
   position: relative;
   &__desc {
-    font-size: 26.4px;
-    line-height: 32px;
+    font-size: clamp(22px, 2vw, 26.4px);
+    line-height: 150%;
     letter-spacing: -.02em;
   }
 
