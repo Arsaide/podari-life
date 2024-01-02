@@ -51,7 +51,44 @@ const Kontakty_i_rekvizity = () => {
                                     <Link className={styles.links} href='tel:+74959953108'>+7 (495) 995-31-08</Link> <br/>
                                 </div>
                             </div>
-
+                            <h3 className={styles.files__title}>Учредительные документы фонда</h3>
+                            <div className={styles.files}>
+                                <div className={styles.filre__links}>
+                                    <div className={styles.download}>
+                                        <Link href='https://api.podari-zhizn.ru/storage/content_block/document/4/document-758f4099343a379e8fc5e5fd6a33865f.pdf'>
+                                            <div className={styles.download__content}>
+                                                <div>
+                                                    <span className={styles.download__title}>Договор оферты</span>
+                                                    <span className={styles.download__desc}>Adobe Portable Document Format (1,0 МБ)</span>
+                                                </div>
+                                                <div className={styles.download__btn}>↓</div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                    <div className={styles.download}>
+                                        <Link href='https://api.podari-zhizn.ru/storage/content_block/document/5/document-4d20cebb1e74ff1099c5911bdf1b5112.pdf'>
+                                            <div className={styles.download__content}>
+                                                <div>
+                                                    <span className={styles.download__title}>Политика конфиденциальности</span>
+                                                    <span className={styles.download__desc}>Adobe Portable Document Format (411,7 КБ)</span>
+                                                </div>
+                                                <div className={styles.download__btn}>↓</div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                    <div className={styles.download}>
+                                        <Link href='https://api.podari-zhizn.ru/storage/content_block/document/6/document-4e2dfe993ea2aee7e3c4c9c4d3bf24bb.pdf'>
+                                            <div className={styles.download__content}>
+                                                <div>
+                                                    <span className={styles.download__title}>Правила пользования сайтом</span>
+                                                    <span className={styles.download__desc}>Adobe Portable Document Format (122,8 КБ)</span>
+                                                </div>
+                                                <div className={styles.download__btn}>↓</div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
