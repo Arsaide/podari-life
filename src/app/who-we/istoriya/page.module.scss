@@ -98,12 +98,51 @@
 }
 
 .link {
-  &__title {
+  margin: 50px 0;
+  display: flex;
 
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(60px, 10vw, 200px);
+    color: #333;
+  }
+
+  &__btn {
+    flex: 0 0 auto;
+    width: clamp(40px, 3vw, 60px);
+    height: clamp(40px, 3vw, 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: clamp(20px, 3vw, 30px);
+    padding-bottom: 4px;
+    border-radius: 50%;
+    background: var(--orange-text);
+  }
+  &__title {
+    display: block;
+    font-weight: 500;
+    font-size: clamp(23px, 3vw, 38px);
+    font-family: Cambria, sans-serif;
+    transition: 0.3s ease;
+    margin-bottom: 20px;
   }
 
   &__desc {
+    display: block;
+    font-size: clamp(15px, 2vw, 18.3px);
+    line-height: 24px;
+    letter-spacing: -.02em;
+    color: grey;
+  }
+}
 
+.link:hover {
+  .link__title {
+    color: var(--orange-text);
   }
 }
 

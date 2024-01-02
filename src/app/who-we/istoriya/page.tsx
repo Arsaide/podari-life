@@ -28,8 +28,13 @@ const Istoriya = () => {
                         </ul>
                         <div className={styles.link}>
                             <Link href='/who-we/kontakty-i-rekvizity'>
-                                <span className={styles.link__title}>Контакты и реквизиты фонда</span>
-                                <span className={styles.link__desc}>Здесь можно узнать адреса и телефоны фонда, а также банковские реквизиты</span>
+                                <div className={styles.link__content}>
+                                    <div>
+                                        <span className={styles.link__title}>Контакты и реквизиты фонда</span>
+                                        <span className={styles.link__desc}>Здесь можно узнать адреса и телефоны фонда, а также банковские реквизиты</span>
+                                    </div>
+                                    <div className={styles.link__btn}>→</div>
+                                </div>
                             </Link>
                         </div>
                     </div>
