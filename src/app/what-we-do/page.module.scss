@@ -2,11 +2,6 @@
   &__container {
     padding: 100px 15px;
   }
-
-  &__cards {
-    display: flex;
-    justify-content: space-around;
-  }
 }
 
 .header {
@@ -78,63 +73,15 @@
   }
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  &__title {
-    color: #333;
-    font-family: IBM Plex Serif;
-    font-size: 64px;
-    font-weight: 500;
-    line-height: 101%;
-    letter-spacing: -3.2px;
-  }
-
-  &__text {
-    color: #808080;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 127%;
-    letter-spacing: -0.62px;
-  }
-
-  &__link {
-    transition: opacity .3s ease-out 0s;
-  }
-
-  &__link:hover {
-    opacity: 0.8;
-  }
-}
-
-@media(max-width: 1439.98px) {
-  .card {
-    &__img {
-      max-width: 400px;
-      max-height: 300px;
-    }
-  }
-}
-
 @media(max-width: 1023.98px) {
   .who {
     &__container {
       padding: 70px 10px;
     }
-    &__cards {
-      flex-direction: column;
-      align-items: center;
-      gap: 50px;
-    }
   }
 
-  .card {
-    align-items: center;
-    &__img {
-      max-width: 400px;
-      max-height: 300px;
-    }
+  .header{
+    padding-top: 82px;
   }
 }
 
@@ -194,11 +141,5 @@
   .header__text {
     padding: 15px 0 25px 0;
     margin-top: 25px;
-  }
-}
-
-@media(max-width: 1023.98px) {
-  .header{
-    padding-top: 82px;
   }
 }
