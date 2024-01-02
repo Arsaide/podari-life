@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './page.module.scss'
 import Link from "next/link";
-import Image from "next/image";
 
 const Istoriya = () => {
     return (
