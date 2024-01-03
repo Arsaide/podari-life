@@ -37,7 +37,7 @@
     letter-spacing: -.84px;
     line-height: 90%;
     position: absolute;
-    z-index: 5;
+    z-index: 1;
     left: 100px;
     bottom: 20%;
     color: #FFFFFF;
@@ -88,7 +88,7 @@
     font-size: clamp(34px, 4vw, 64px);
     font-weight: 500;
     line-height: 101%;
-    letter-spacing: -3.2px;
+    letter-spacing: -1.2px;
   }
 
   &__text {
