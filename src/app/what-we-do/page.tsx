@@ -35,7 +35,7 @@ const WhatWeDo = () => {
                             <p className={styles.card__text}>Каждому конкретному пациенту</p>
                         </div>
                         <div className={styles.card}>
-                            <h3 className={styles.card__title}>Помощь детям в клиниках</h3>
+                            <h3 className={styles.card__title}>Помощь в клиниках</h3>
                             <div className={styles.card__img}>
                                 <Image
                                     src='/whatwedo/helpedchild.jpg'
