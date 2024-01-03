@@ -46,7 +46,45 @@ const WhatWeDo = () => {
                             <p className={styles.card__text}>Поддержка больниц и отделений</p>
                         </div>
                     </div>
-                    <div className={styles.cards_small}></div>
+
+
+                    <div className={styles.cards__small}>
+                        <div className={styles.scard}>
+                            <h3 className={styles.scard__title}>Донорство</h3>
+                            <div className={styles.scard__img}>
+                                <Image
+                                    src='/whatwedo/donor.jpg'
+                                    alt='Изображение крови от донора'
+                                    fill={true}
+                                    loading={'lazy'}/>
+                            </div>
+                            <p className={styles.scard__text}>Обеспечение кровью и ее компонентами </p>
+                        </div>
+                        <div className={styles.scard}>
+                            <h3 className={styles.scard__title}>Социальная помощь</h3>
+                            <div className={styles.scard__img}>
+                                <Image
+                                    src='/whatwedo/sochelp.jpg'
+                                    alt='Изображение женщины с ребенком'
+                                    fill={true}
+                                    loading={'lazy'}/>
+                            </div>
+                            <p className={styles.scard__text}>Поддержка семей, где болеет ребенок </p>
+                        </div>
+                        <div className={styles.scard}>
+                            <h3 className={styles.scard__title}>Волонтерство</h3>
+                            <div className={styles.scard__img}>
+                                <Image
+                                    src='/whatwedo/volunteer.jpg'
+                                    alt='Изображение детей рядом взрослыми людьми волонтерами'
+                                    fill={true}
+                                    loading={'lazy'}/>
+                            </div>
+                            <p className={styles.scard__text}>Безвозмездная помощь фонду и детям </p>
+                        </div>
+                    </div>
+
+
                     <div className={styles.cards__big}>
                         <div className={styles.card}>
                             <h3 className={styles.card__title}>Реабилитация</h3>
