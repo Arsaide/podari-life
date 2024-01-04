@@ -2,43 +2,22 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Posts.module.scss'
 import postCard from "../../../../../public/childrenPosts";
-import Link from "next/link";
-import Image from "next/image";
 import TheCardProps from "@/components/TheCardProps/TheCardProps";
-
-async function getData() {
-    return postCard
-}
-
-interface Posts {
-
-}
-
 const Posts = () => {
-    const [data, setData] = useState([])
-    const [page, setPage] = useState()
+    const [items, setItems] = useState([])
+    const [visible, setVisible] = useState(6)
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await getData()
+    const showMoreItems = () => {
+        setVisible(prevValue => prevValue + 6)
+    }
 
-            } catch (e) {
-                alert(`Error: ${e}`);
-            }
-        }
-
-        fetchData()
-    }, [])
-
-
-    const posts = getData();
+    const posts = postCard;
 
     return (
         <section className={styles.posts}>
             <div className={styles.posts__container}>
                 <div className={styles.cards}>
-                    {postCard.map((post) => (
+                    {posts.slice(0, visible).map((post) => (
                         <TheCardProps
                             key={post.id}
                             href={post.webName}
@@ -49,6 +28,7 @@ const Posts = () => {
                             status={post.card.text.status}
                             date={post.card.text.date}/>
                     ))}
+                    <button onClick={showMoreItems}>LOAD MORE</button>
                 </div>
             </div>
         </section>
