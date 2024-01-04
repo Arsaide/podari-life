@@ -1,4 +1,4 @@
-interface posts {
+export interface Post {
     id: number
     webName: string
     card: {
@@ -26,7 +26,7 @@ interface posts {
     }
 }
 
-const postsArray: posts[] = [
+const postsArray: Post[] = [
     {
         "id": 1,
         "webName": "novogodnii-zvezdnyi-marafon-startoval",
@@ -159,7 +159,7 @@ const postsArray: posts[] = [
             "text": {
                 "title": "«Я здесь на своем месте»",
                 "desc": "Наталия Михеева — больничный координатор фонда «Подари жизнь» в Центре нейрохирургии им. Бурденко. В День координатора волонтеров она рассказала о себе и своей работе журналу Grazia.",
-                "date": "7.11.2023",
+                "date": "07.11.2023",
                 "status": "Нужна помощь"
             }
         },

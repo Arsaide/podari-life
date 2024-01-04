@@ -2,6 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Posts.module.scss'
 import postCard from "../../../../../public/childrenPosts";
+import postCardInt, { Post } from "../../../../../public/childrenPosts";
 import TheCardProps from "@/components/TheCardProps/TheCardProps";
 const Posts = () => {
     const [items, setItems] = useState([])
@@ -13,11 +14,25 @@ const Posts = () => {
 
     const posts = postCard;
 
+
+    const parseDate = (dateString: string) => {
+        const [day, month, year] = dateString.split('.')
+
+        return new Date(Number(year), Number(month) - 1, Number(day))
+    }
+    const sortDates = (a: Post, b: Post): number => {
+        const dateA = parseDate(a.card.text.date),
+              dateB = parseDate(b.card.text.date)
+
+        return dateB.getTime() - dateA.getTime();
+    }
+    const sortedPosts: Post[] = [...postCard].sort(sortDates)
+
     return (
         <section className={styles.posts}>
             <div className={styles.posts__container}>
                 <div className={styles.cards}>
-                    {posts.slice(0, visible).map((post) => (
+                    {sortedPosts.slice(0, visible).map((post) => (
                         <TheCardProps
                             key={post.id}
                             href={post.webName}
@@ -33,7 +48,7 @@ const Posts = () => {
                             <button
                                 className={styles.btn}
                                 onClick={showMoreItems}>
-                                Загрузить еще
+                                Показать еще
                             </button>
                         )}
                     </div>
