@@ -5,7 +5,6 @@ import postCard from "../../../../../public/childrenPosts";
 import postCardInt, { Post } from "../../../../../public/childrenPosts";
 import TheCardProps from "@/components/TheCardProps/TheCardProps";
 const Posts = () => {
-    const [items, setItems] = useState([])
     const [visible, setVisible] = useState(6)
 
     const showMoreItems = () => {
@@ -14,19 +13,22 @@ const Posts = () => {
 
     const posts = postCard;
 
-
     const parseDate = (dateString: string) => {
         const [day, month, year] = dateString.split('.')
 
         return new Date(Number(year), Number(month) - 1, Number(day))
     }
-    const sortDates = (a: Post, b: Post): number => {
+
+    const compareDates = (a: Post, b: Post): number => {
         const dateA = parseDate(a.card.text.date),
               dateB = parseDate(b.card.text.date)
 
         return dateB.getTime() - dateA.getTime();
     }
-    const sortedPosts: Post[] = [...postCard].sort(sortDates)
+
+    const sortedPosts: Post[] = [...postCard].sort(compareDates)
+
+
 
     return (
         <section className={styles.posts}>
