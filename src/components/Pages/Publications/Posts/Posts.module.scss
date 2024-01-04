@@ -8,7 +8,37 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 30px;
+  outline: 2px solid rgba(138, 138, 138);
+  color: #333;
+  font-weight: 600;
+  transition: background-color, color, transform .15s ease;
+
+  &:active {
+    transform: scale(.9);
+  }
+
+  &:hover {
+    color: #FFFFFF;
+    background: var(--orange-text);
+    outline: none;
+  }
+}
+
+.btnCnt {
+  width: 100%;
+  display: flex;
   justify-content: center;
+  margin-top: 30px;
+}
+
+@media(max-width: 1349.98px) {
+  .cards {
+    justify-content: center;
+  }
 }
 
 @media(max-width: 1023.98px) {
@@ -16,5 +46,11 @@
     &__container {
       padding-top: 82px;
     }
+  }
+}
+
+@media(max-width: 374.98px) {
+  .btn {
+    padding: 10px 20px;
   }
 }
