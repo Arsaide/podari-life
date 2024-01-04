@@ -2,24 +2,17 @@ import React from 'react'
 import styles from "./page.module.scss"
 import Link from "next/link";
 import Image from "next/image";
+import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
 
 const WhatWeDo = () => {
     return (
         <section className={styles.wedo}>
-            <div className={styles.header}>
-                <div className={styles.header__nextcnt}>
-                    <h2 className={styles.header__title}>Что мы делаем</h2>
-                    <div className={styles.header__imgcnt}>
-                        <div className={styles.header__img} style={{backgroundImage: 'url(/whatwedo/banner.jpg)'}}>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.header__content}>
-                    <p className={styles.header__text}>В этом разделе собрана информация о всех проектах фонда, которые
-                        направлены на помощь детям. А также о том, какие благотворительные мероприятия проводит «Подари
-                        жизнь» и с какими законодательными инициативами выступает.</p>
-                </div>
-            </div>
+            <TheHeadBannerProps
+                title={'Что мы делаем'}
+                img={'whatwedo/banner.jpg'}
+                text={'В этом разделе собрана информация о всех проектах фонда, которые\n' +
+                    '      направлены на помощь детям. А также о том, какие благотворительные мероприятия проводит «Подари\n' +
+                    '      жизнь» и с какими законодательными инициативами выступает.'}/>
             <div className={styles.wedo__container}>
                 <div className={styles.cards}>
                     <div className={styles.cards__big}>
