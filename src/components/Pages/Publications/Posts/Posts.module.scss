@@ -1,0 +1,17 @@
+.posts {
+  &__container {
+    padding-top: 119px;
+  }
+}
+
+//.cards {
+//  display: flex;
+//}
+
+@media(max-width: 1023.98px) {
+  .posts {
+    &__container {
+      padding-top: 82px;
+    }
+  }
+}

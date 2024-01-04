@@ -1,36 +1,44 @@
-import React from 'react';
-import styles from './ChildrenPosts.module.scss'
-import posts from '../../../../../public/childrenPosts'
+'use client'
+import React, {useEffect, useState} from 'react';
+import styles from './Posts.module.scss'
+import postCard from "../../../../../public/childrenPosts";
 import Link from "next/link";
 import Image from "next/image";
 import TheCardProps from "@/components/TheCardProps/TheCardProps";
 
 async function getData() {
-    return posts
+    return postCard
 }
 
-export async function getStaticProps() {
-    const posts = await getData();
+interface Posts {
 
-    return {
-        props: {
-            posts,
-        },
-        revalidate: 60,
-    };
 }
 
-const ChildrenPosts = async () => {
-    const posts = await getData();
+const Posts = () => {
+    const [data, setData] = useState([])
+    const [page, setPage] = useState()
 
-    const randomPosts = posts.sort(() => Math.random() - 0.5).slice(0, 3);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await getData()
+
+            } catch (e) {
+                alert(`Error: ${e}`);
+            }
+        }
+
+        fetchData()
+    }, [])
+
+
+    const posts = getData();
 
     return (
         <section className={styles.posts}>
             <div className={styles.posts__container}>
-                <h3 className={styles.posts__title}>Новости:</h3>
                 <div className={styles.cards}>
-                    {randomPosts.map((post) => (
+                    {postCard.map((post) => (
                         <TheCardProps
                             key={post.id}
                             href={post.webName}
@@ -47,4 +55,4 @@ const ChildrenPosts = async () => {
     );
 };
 
-export default ChildrenPosts;
+export default Posts;
