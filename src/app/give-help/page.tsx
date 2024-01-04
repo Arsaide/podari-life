@@ -1,10 +1,52 @@
 import React from 'react'
 import styles from "./page.module.scss"
 import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
+import Link from "next/link";
+import ChildrenPosts from "@/components/Pages/Home/ChildrenPosts/ChildrenPosts";
 const GiveHelp = () => {
 	return (
-		<section>
-			<TheHeadBannerProps title={'Cделать пожертвование'} img={'help/banner.jpg'} text={'Мы делаем все, чтобы помогать было легко и удобно'}/>
+		<section className={styles.help}>
+			<TheHeadBannerProps
+				title={'Cделать пожертвование'}
+				img={'help/banner.jpg'}
+				text={'Мы делаем все, чтобы помогать было легко и удобно'}/>
+			<div className={styles.help__container}>
+				<h2 className={styles.help__title}>Дарим жизнь вместе</h2>
+				<div className={styles.help__content}>
+					<div className={styles.text}>
+						<div className={styles.text__cnt}>
+							<p className={styles.help__text}>
+								Наша миссия - предоставить необходимую помощь детям,
+								сталкивающимся с тяжелыми заболеваниями в России.
+								Каждый вклад на этой странице превращается в ценный дар,
+								предоставляя средства для лечения и поддержки каждого ребенка,
+								нуждающегося в нашей помощи!
+							</p>
+							<p className={styles.help__text}>
+								С вашей помощью мы можем изменить жизнь маленьких пациентов,
+								предоставив им возможность на радостную и здоровую будущее.
+								Ваш взнос напрямую влияет на жизнь детей и дарит надежду исцеления.
+								Спасибо, что становитесь частью нашего важного дела!
+							</p>
+							<p className={styles.help__text}>
+								Присоединитесь к нашему благотворительному фонду, станьте частью этой важной миссии.
+								Ваша поддержка - это шаг в направлении к более здоровому, счастливому будущему для
+								каждого ребенка. Спасибо за ваше добросердечное участие и важный вклад в наше общее дело!
+							</p>
+						</div>
+					</div>
+					<div className={styles.donate}>
+						<h3 className={styles.donate__title}>Пожертвование</h3>
+						<p className={styles.help__text}>Нажмите на кнопку и заполните форму, чтобы помочь нуждающимся детям!</p>
+						<Link
+							href="https://donate.stripe.com/00g5labgpblc400144"
+							className={styles.link}>
+							Помочь
+						</Link>
+					</div>
+				</div>
+				<ChildrenPosts/>
+			</div>
 		</section>
 	)
 }
