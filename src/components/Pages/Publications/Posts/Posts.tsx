@@ -8,7 +8,7 @@ const Posts = () => {
     const [visible, setVisible] = useState(6)
 
     const showMoreItems = () => {
-        setVisible(prevValue => prevValue + 6)
+        setVisible(value => value + 6)
     }
 
     const posts = postCard;
@@ -28,7 +28,15 @@ const Posts = () => {
                             status={post.card.text.status}
                             date={post.card.text.date}/>
                     ))}
-                    <button onClick={showMoreItems}>LOAD MORE</button>
+                    <div className={styles.btnCnt}>
+                        {visible < posts.length && (
+                            <button
+                                className={styles.btn}
+                                onClick={showMoreItems}>
+                                Загрузить еще
+                            </button>
+                        )}
+                    </div>
                 </div>
             </div>
         </section>
