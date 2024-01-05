@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
 
+
+
 const WhoWe = () => {
     return (
         <section className={styles.who}>

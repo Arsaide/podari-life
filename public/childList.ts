@@ -1,4 +1,4 @@
-interface ChildList {
+export interface ChildList {
     src: string
     alt: string
     name: string

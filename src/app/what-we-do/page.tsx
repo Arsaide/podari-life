@@ -3,6 +3,18 @@ import styles from "./page.module.scss"
 import Link from "next/link";
 import Image from "next/image";
 import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
+import ChildrenPosts from "@/components/Pages/Home/ChildrenPosts/ChildrenPosts";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Что мы делаем | фонд «Подари жизнь»',
+    description: "Откройте для себя наши инициативы и благотворительные проекты " +
+        ". Здесь собрана информация о наших усилиях по помощи детям, проведении " +
+        "благотворительных мероприятий и участии в законодательных инициативах. Узнайте, как ваша " +
+        "поддержка делает реальное влияние на жизни маленьких пациентов.",
+    keywords: 'реабилитация, инклюзивное образование, медицинские программы, поддержка детского здоровья, социальная активность,' +
+        'мероприятия, благотворительные инициативы, забота о детях, поддержка здоровья'
+}
 
 const WhatWeDo = () => {
     return (
@@ -103,6 +115,7 @@ const WhatWeDo = () => {
                         </div>
                     </div>
                 </div>
+                <ChildrenPosts/>
             </div>
         </section>
     )

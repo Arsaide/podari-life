@@ -3,6 +3,18 @@ import styles from "./page.module.scss"
 import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
 import Link from "next/link";
 import ChildrenPosts from "@/components/Pages/Home/ChildrenPosts/ChildrenPosts";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+	title: 'Помочь фонду | фонд «Подари жизнь»',
+	description: 'Поддержите благотворительный фонд «Подари жизнь» и ' +
+		'помогите сильно больным детям в России. ' +
+		'Ваш вклад — шаг к созданию лучшего будущего для маленьких пациентов. ' +
+		'Присоединитесь к нам в миссии спасения жизней и надежды на исцеление.',
+	keywords: ' благотворительное пожертвование, поддержка медицины, волонтерство, спасение жизней, добрые дела,' +
+		'финансовая помощь, врачи-волонтеры, гуманитарная помощь, поддержка онкологических пациентов'
+}
+
 const GiveHelp = () => {
 	return (
 		<section className={styles.help}>

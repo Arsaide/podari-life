@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './page.module.scss'
 import {Metadata} from "next";
-import posts from "../../../public/childrenPosts";
 import Image from "next/image";
 import Link from "next/link";
 import ChildrenPosts from "@/components/Pages/Home/ChildrenPosts/ChildrenPosts";
+import posts from "../../../public/childrenPosts";
+import childList, {ChildList} from '../../../public/childList'
 
 async function getData(id: string) {
     const post = posts.find((post) => post.id === Number(id))
@@ -19,8 +20,11 @@ type Props = {
 
 export async function generateMetadata({ params: { webName } }: Props): Promise<Metadata> {
     const post = posts.find((post) => post.webName === webName);
+    const keyWordPost = childList;
     return {
-        title: post?.card?.text?.title || 'Новость не найдена',
+        title: `${post?.card?.text?.title} | фонд «Подари жизнь»` || 'Новость не найдена | фонд «Подари жизнь»',
+        description: `${post?.card?.text?.desc}`,
+        keywords: `${post?.card?.text?.status}, блог, новости, вдохновение, истории успеха, социальные проекты, забота о здоровье`
     };
 }
 
