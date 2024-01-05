@@ -57,17 +57,21 @@
   font-weight: 600;
   transition: border,
               background-color,
-              color,
-              transform .3s ease-out 0s;
-
-  &:active {
-    transform: scale(.95);
-  }
+              color .3s ease-out 0s;
 
   &:hover {
     border: 1px solid rgba(59, 59, 59, .3);
     background-color: #fff;
     color: #333;
+  }
+}
+
+.offer {
+  text-decoration: underline;
+  opacity: 0.9;
+  transition: .15s ease;
+  &:hover {
+    opacity: 0.7;
   }
 }
 

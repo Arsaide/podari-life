@@ -55,6 +55,11 @@ const GiveHelp = () => {
 							className={styles.link}>
 							Помочь
 						</Link>
+						<Link
+							href='https://api.podari-zhizn.ru/storage/content_block/document/4/regular_document-758f4099343a379e8fc5e5fd6a33865f.pdf'
+							className={styles.offer}>
+							Публичная оферта
+						</Link>
 					</div>
 				</div>
 				<ChildrenPosts/>
