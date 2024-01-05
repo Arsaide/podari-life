@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./page.module.scss"
 import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
 import Link from "next/link";
-import ChildrenPosts from "@/components/Pages/Home/ChildrenPosts/ChildrenPosts";
+import News from "@/components/TheNews/News";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
@@ -62,7 +62,7 @@ const GiveHelp = () => {
 						</Link>
 					</div>
 				</div>
-				<ChildrenPosts/>
+				<News/>
 			</div>
 		</section>
 	)

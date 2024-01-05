@@ -27,8 +27,8 @@ const TheFooter = () => {
                             <div className={styles.footer__menuLeft}>
                                 <Link className={styles.footer__linkMenu} href='/who-we'>Кто мы</Link>
                                 <Link className={styles.footer__linkMenu} href='/what-we-do'>Что мы делаем</Link>
+                                <Link className={styles.footer__linkMenu} href='/publications'>Публикации</Link>
                                 <Link className={styles.footer__linkMenu} href='/give-help'>Помочь фонду</Link>
-                                <Link className={styles.footer__linkMenu} href='/get-help'>Получить помощь</Link>
                             </div>
                             <div className={styles.footer__menuRight}>
                                 <a className={styles.sponsor} href="https://www.podari.life/">Podari.Life</a>

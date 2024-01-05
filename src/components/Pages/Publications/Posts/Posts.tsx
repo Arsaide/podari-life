@@ -37,7 +37,7 @@ const Posts = () => {
                     {sortedPosts.slice(0, visible).map((post) => (
                         <TheCardProps
                             key={post.id}
-                            href={post.webName}
+                            href={`publications/${post.webName}`}
                             imgSrc={post.post.img.src}
                             imgAlt={post.card.img.alt}
                             title={post.card.text.title}

@@ -2,7 +2,7 @@ import HomeBanner from "@/components/Pages/Home/HomeBanner/HomeBanner";
 import Children from "@/components/Pages/Home/Children/Children";
 import DonateChildren from "@/components/Pages/Home/DonateChildren/DonateChildren";
 import Platform from "@/components/Pages/Home/Platform/Platform";
-import ChildrenPosts from "@/components/Pages/Home/ChildrenPosts/ChildrenPosts";
+import News from "@/components/TheNews/News";
 
 export default function Home() {
     return (
@@ -11,7 +11,7 @@ export default function Home() {
             <Children/>
             <DonateChildren/>
             <Platform/>
-            <ChildrenPosts/>
+            <News/>
         </>
     )
 }

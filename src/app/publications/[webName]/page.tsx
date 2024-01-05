@@ -1,37 +1,31 @@
 import React from 'react';
 import styles from './page.module.scss'
+import News from "@/components/TheNews/News";
+import posts from '../../../../public/childrenPosts'
 import {Metadata} from "next";
-import Image from "next/image";
 import Link from "next/link";
-import ChildrenPosts from "@/components/Pages/Home/ChildrenPosts/ChildrenPosts";
-import posts from "../../../public/childrenPosts";
-import childList, {ChildList} from '../../../public/childList'
-
-async function getData(id: string) {
-    const post = posts.find((post) => post.id === Number(id))
-    return post || null;
-}
+import Image from "next/image";
 
 type Props = {
     params: {
-        webName: string;
-    };
-};
-
-export async function generateMetadata({ params: { webName } }: Props): Promise<Metadata> {
-    const post = posts.find((post) => post.webName === webName);
-    const keyWordPost = childList;
-    return {
-        title: `${post?.card?.text?.title} | фонд «Подари жизнь»` || 'Новость не найдена | фонд «Подари жизнь»',
-        description: `${post?.card?.text?.desc}`,
-        keywords: `${post?.card?.text?.status}, блог, новости, вдохновение, истории успеха, социальные проекты, забота о здоровье`
-    };
+        webName: string
+    }
 }
 
-const Post = async ({ params: { webName } }: Props) => {
-    const item = posts.find((post) => post.webName === webName);
+export async function generateMetadata({ params: { webName } }: Props): Promise<Metadata> {
+    const post = posts.find((post): boolean => post.webName === webName)
 
-    if (!item) {
+    return {
+        title: `${post?.card?.text?.title}`,
+        description: `${post?.card?.text?.desc}`,
+        keywords: `${post?.card?.text?.status}, блог, новости, вдохновение, истории успеха, социальные проекты, забота о здоровье`
+    }
+}
+
+const Post = async ({ params: {webName} }: Props)  => {
+    const item = posts.find((post) => post.webName === webName)
+
+    if(!item) {
         return (
             <section className={styles.post}>
                 <div className={styles.post__container}>
@@ -94,11 +88,12 @@ const Post = async ({ params: { webName } }: Props) => {
                     </div>
                 </div>
 
-                <ChildrenPosts/>
+                <News/>
                 <div className={styles.background}></div>
             </section>
-        )
+        );
     }
 };
 
 export default Post;
+

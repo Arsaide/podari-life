@@ -3,7 +3,7 @@ import styles from "./page.module.scss"
 import Link from "next/link";
 import Image from "next/image";
 import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
-import ChildrenPosts from "@/components/Pages/Home/ChildrenPosts/ChildrenPosts";
+import News from "@/components/TheNews/News";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
@@ -115,7 +115,7 @@ const WhatWeDo = () => {
                         </div>
                     </div>
                 </div>
-                <ChildrenPosts/>
+                <News/>
             </div>
         </section>
     )

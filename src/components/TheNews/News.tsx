@@ -1,8 +1,6 @@
 import React from 'react';
-import styles from './ChildrenPosts.module.scss'
-import posts from '../../../../../public/childrenPosts'
-import Link from "next/link";
-import Image from "next/image";
+import styles from './News.module.scss'
+import posts from '../../../public/childrenPosts'
 import TheCardProps from "@/components/TheCardProps/TheCardProps";
 
 async function getData() {
@@ -20,9 +18,8 @@ export async function getStaticProps() {
     };
 }
 
-const ChildrenPosts = async () => {
+const News = async () => {
     const posts = await getData();
-
     const randomPosts = posts.sort(() => Math.random() - 0.5).slice(0, 3);
 
     return (
@@ -33,7 +30,7 @@ const ChildrenPosts = async () => {
                     {randomPosts.map((post) => (
                         <TheCardProps
                             key={post.id}
-                            href={post.webName}
+                            href={`publications/${post.webName}`}
                             imgSrc={post.post.img.src}
                             imgAlt={post.card.img.alt}
                             title={post.card.text.title}
@@ -47,4 +44,4 @@ const ChildrenPosts = async () => {
     );
 };
 
-export default ChildrenPosts;
+export default News;
