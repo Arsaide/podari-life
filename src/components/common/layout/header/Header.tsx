@@ -1,5 +1,5 @@
 'use client'
-import styles from './TheHeader.module.scss'
+import styles from './Header.module.scss'
 import React, {useEffect, useRef, useState} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -7,7 +7,7 @@ import classNames from 'classnames'
 
 interface BurgerMenuProps {}
 
-const TheHeader: React.FC<BurgerMenuProps> = () => {
+const Header: React.FC<BurgerMenuProps> = () => {
 	//скртытие хедера
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
 	const [visible, setVisible] = useState(true);
@@ -157,4 +157,4 @@ const TheHeader: React.FC<BurgerMenuProps> = () => {
 	)
 }
 
-export default TheHeader
+export default Header

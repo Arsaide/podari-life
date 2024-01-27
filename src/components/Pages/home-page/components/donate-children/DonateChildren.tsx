@@ -1,5 +1,5 @@
 import React from 'react';
-import TheButtonProps from "@/components/TheButtonProps/TheButtonProps";
+import ButtonProps from "@/components/common/ui/button-props/ButtonProps";
 import styles from './DonateChildren.module.scss';
 
 const DonateChildren = () => {
@@ -10,7 +10,7 @@ const DonateChildren = () => {
                 <p className={styles.donate__text}>Есть очень много разных способов.<br/> Пожертвование - только один из них. Выберите<br/>
                     удобный вам формат.</p>
                 <div className={styles.donate__btns}>
-                    <TheButtonProps text='Пожертвовать' url='/give-help'/>
+                    <ButtonProps text='Пожертвовать' url='/give-help'/>
                 </div>
             </div>
         </section>

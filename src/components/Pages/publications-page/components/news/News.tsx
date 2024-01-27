@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './News.module.scss'
-import posts from '../../../public/childrenPosts'
-import TheCardProps from "@/components/TheCardProps/TheCardProps";
+import posts from '../../../../../../public/childrenPosts'
+import CardProps from "@/components/common/ui/card-props/CardProps";
 
 async function getData() {
     return posts
@@ -28,7 +28,7 @@ const News = async () => {
                 <h3 className={styles.posts__title}>Новости:</h3>
                 <div className={styles.cards}>
                     {randomPosts.map((post) => (
-                        <TheCardProps
+                        <CardProps
                             key={post.id}
                             href={`publications/${post.webName}`}
                             imgSrc={post.post.img.src}

@@ -1,9 +1,9 @@
 'use client'
 import React, {useEffect, useState} from 'react';
 import styles from './Posts.module.scss'
-import postCard from "../../../../../public/childrenPosts";
-import postCardInt, { Post } from "../../../../../public/childrenPosts";
-import TheCardProps from "@/components/TheCardProps/TheCardProps";
+import postCard from "../../../../../../public/childrenPosts";
+import postCardInt, { Post } from "../../../../../../public/childrenPosts";
+import CardProps from "@/components/common/ui/card-props/CardProps";
 const Posts = () => {
     const [visible, setVisible] = useState(6)
 
@@ -35,7 +35,7 @@ const Posts = () => {
             <div className={styles.posts__container}>
                 <div className={styles.cards}>
                     {sortedPosts.slice(0, visible).map((post) => (
-                        <TheCardProps
+                        <CardProps
                             key={post.id}
                             href={`publications/${post.webName}`}
                             imgSrc={post.post.img.src}

@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './Children.module.scss'
 import Image from "next/image";
 import Link from "next/link";
-import childImages from '../../../../../public/childList'
+import childImages from '../../../../../../public/childList'
 
 const Children = () => {
 

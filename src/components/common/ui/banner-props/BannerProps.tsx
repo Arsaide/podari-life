@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TheHeadBannerProps.module.scss'
+import styles from './BannerProps.module.scss'
 
 type Props = {
     title: string
@@ -7,7 +7,7 @@ type Props = {
     text: string
 }
 
-const TheHeadBannerProps = ({title, img, text}:Props) => {
+const BannerProps = ({title, img, text}:Props) => {
     return (
         <div className={styles.header}>
             <div className={styles.header__nextcnt}>
@@ -24,4 +24,4 @@ const TheHeadBannerProps = ({title, img, text}:Props) => {
     );
 };
 
-export default TheHeadBannerProps;
+export default BannerProps;

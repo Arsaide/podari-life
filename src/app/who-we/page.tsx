@@ -2,14 +2,14 @@ import React from 'react'
 import styles from "./page.module.scss"
 import Image from "next/image";
 import Link from "next/link";
-import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
+import BannerProps from "@/components/common/ui/banner-props/BannerProps";
 
 
 
 const WhoWe = () => {
     return (
         <section className={styles.who}>
-            <TheHeadBannerProps
+            <BannerProps
                 title={'Кто мы'}
                 img={'who/banner.jpg'}
                 text={'Мы — это фонд «Подари жизнь» в самом широком смысле. Благотворители, волонтеры, врачи, доноры, попечители, все те, кто делает возможной помощь больным детям.'}/>

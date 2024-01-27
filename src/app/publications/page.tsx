@@ -1,5 +1,5 @@
 import React from 'react';
-import Posts from "@/components/Pages/Publications/Posts/Posts";
+import Posts from "@/components/Pages/publications-page/components/posts/Posts";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {

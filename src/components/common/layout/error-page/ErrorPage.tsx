@@ -1,8 +1,8 @@
-import styles from './TheErrorPage.module.scss';
+import styles from './ErrorPage.module.scss';
 
 import React from 'react';
 
-const TheErrorPage = () => {
+const ErrorPage = () => {
     return (
         <section className={styles.error}>
             <div className={styles.error__container}>
@@ -12,4 +12,4 @@ const TheErrorPage = () => {
     );
 };
 
-export default TheErrorPage;
+export default ErrorPage;

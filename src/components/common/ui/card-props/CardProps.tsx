@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./TheCardProps.module.scss"
+import styles from "./CardProps.module.scss"
 import Link from "next/link";
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ type Props = {
     date: string
 }
 
-function TheCardProps ({key, href, imgSrc, imgAlt, title, desc, status, date}: Props) {
+function CardProps ({key, href, imgSrc, imgAlt, title, desc, status, date}: Props) {
     return (
         <article className={styles.card} key={key}>
             <Link
@@ -42,4 +42,4 @@ function TheCardProps ({key, href, imgSrc, imgAlt, title, desc, status, date}: P
         </article>
     );
 }
-export default TheCardProps;
+export default CardProps;

@@ -2,8 +2,8 @@ import React from 'react'
 import styles from "./page.module.scss"
 import Link from "next/link";
 import Image from "next/image";
-import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
-import News from "@/components/TheNews/News";
+import BannerProps from "@/components/common/ui/banner-props/BannerProps";
+import News from "@/components/Pages/publications-page/components/news/News";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const WhatWeDo = () => {
     return (
         <section className={styles.wedo}>
-            <TheHeadBannerProps
+            <BannerProps
                 title={'Что мы делаем'}
                 img={'whatwedo/banner.jpg'}
                 text={'В этом разделе собрана информация о всех проектах фонда, которые\n' +

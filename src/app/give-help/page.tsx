@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from "./page.module.scss"
-import TheHeadBannerProps from "@/components/TheHeadBannerProps/TheHeadBannerProps";
+import BannerProps from "@/components/common/ui/banner-props/BannerProps";
 import Link from "next/link";
-import News from "@/components/TheNews/News";
+import News from "@/components/Pages/publications-page/components/news/News";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const GiveHelp = () => {
 	return (
 		<section className={styles.help}>
-			<TheHeadBannerProps
+			<BannerProps
 				title={'Cделать пожертвование'}
 				img={'help/banner.jpg'}
 				text={'Мы делаем все, чтобы помогать было легко и удобно'}/>

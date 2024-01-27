@@ -1,8 +1,8 @@
-import styles from './HomeBanner.module.scss';
+import styles from './ChildrenBanner.module.scss';
 import React from 'react';
 import Image from "next/image";
 
-const HomeBanner = () => {
+const ChildrenBanner = () => {
     return (
         <section className={styles.banner}>
             <div className={styles.banner__container}>
@@ -26,4 +26,4 @@ const HomeBanner = () => {
     );
 };
 
-export default HomeBanner;
+export default ChildrenBanner;

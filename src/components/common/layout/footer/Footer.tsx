@@ -1,9 +1,9 @@
-import styles from './TheFooter.module.scss';
+import styles from './Footer.module.scss';
 import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
 
-const TheFooter = () => {
+const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.footer__container}>
@@ -163,4 +163,4 @@ const TheFooter = () => {
     );
 };
 
-export default TheFooter;
+export default Footer;

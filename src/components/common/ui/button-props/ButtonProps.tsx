@@ -1,4 +1,4 @@
-import styles from './TheButtonProps.module.scss';
+import styles from './ButtonProps.module.scss';
 
 import React from 'react';
 import Link from "next/link";
@@ -8,7 +8,7 @@ type Props = {
     url: string,
 }
 
-function TheButtonProps({text, url}: Props) {
+function ButtonProps({text, url}: Props) {
     return (
         <Link href={url}>
             <button className={styles.button}>{text}</button>
@@ -16,4 +16,4 @@ function TheButtonProps({text, url}: Props) {
     );
 }
 
-export default TheButtonProps;
+export default ButtonProps;

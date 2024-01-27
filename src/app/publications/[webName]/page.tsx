@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './page.module.scss'
-import News from "@/components/TheNews/News";
+import News from "@/components/Pages/publications-page/components/news/News";
 import posts from '../../../../public/childrenPosts'
 import {Metadata} from "next";
 import Link from "next/link";
