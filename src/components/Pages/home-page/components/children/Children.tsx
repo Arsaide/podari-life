@@ -51,7 +51,7 @@ const Children = () => {
                                     </Link>
                                     <div className={styles.list__itemDesc}>
                                         <p className={styles.list__desc}>{child.years} лет</p>
-                                        <p className={styles.list__desc} style={{color: 'var(--orange-text)'}}>{child.money} ₽ необходимо</p>
+                                        <p className={styles.list__desc} style={{color: 'var(--orange-text)'}}>{child.money} грн необходимо</p>
                                         <Image className={styles.list__itemDescImg}
                                                src={child.src}
                                                alt={child.alt}
