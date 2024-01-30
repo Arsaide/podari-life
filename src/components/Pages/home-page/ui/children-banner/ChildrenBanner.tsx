@@ -7,7 +7,7 @@ const ChildrenBanner = () => {
         <section className={styles.banner}>
             <div className={styles.banner__container}>
                 <div className={styles.leftContent}>
-                    <h2 className={styles.leftContent__text}>Детский рак лечится. Мы работаем, чтобы любой ребенок в России
+                    <h2 className={styles.leftContent__text}>Детский рак лечится. Мы работаем, чтобы любой ребенок 
                         мог получить все необходимое лечение.</h2>
                 </div>
                 <div className={styles.rightContent}>
